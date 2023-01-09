@@ -26,7 +26,7 @@ on:
 
 env:
 #edit your values here
-  ENVIRONMENT_URL: https://apps.powerapps.com/play/e/d9fd1f53-981c-eb98-8e60-4a41c7a797d9/a/b848ad14-e660-417f-b1e0-840e59511118?tenantId=ef03601c-2e22-4313-adbf-9ff5407825e1
+  ENVIRONMENT_URL: org39661461.crm8.dynamics.com
   USERNAME: cbreakspear@prolifics.com
 
 
