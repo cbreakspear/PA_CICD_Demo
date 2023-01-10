@@ -7,7 +7,7 @@ on:
       types: [created]        
 
 jobs:
-  Release-solution-ALMLab:
+  Release-solution-DEMO-CICD:
     uses: ./.github/workflows/release-solution-to-prod-reusable.yml
     with:
       #You can specify the solution name here
