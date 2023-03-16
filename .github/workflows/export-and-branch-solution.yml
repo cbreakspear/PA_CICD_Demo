@@ -48,7 +48,7 @@ jobs:
         app-id: ${{env.CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
-
+        TestAutomationURLFilePath: 'https://apps.powerapps.com/play/11f63c14-c688-499c-a803-ba9bf319f182?tenantId=ef03601c-2e22-4313-adbf-9ff5407825e1&__PATestCaseId=7d159243-8199-4bfc-ac8b-91967dcf41be&source=testStudioLink'
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
