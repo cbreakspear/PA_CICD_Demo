@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>pub_cbteststudiodemo_f4676</Name>
+  <AppVersion>2023-03-16T15:25:45Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.23031.19.0</CreatedByClientVersion>
+  <MinClientVersion>3.23031.19.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","sienaVersion":"20230316T130409Z-3.23031.19.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.23031.19","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","optimizedForTeamsMeeting":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>CB-TESTSTUDIO-DEMO</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage>Saved by Test Studio</CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"3eaa3607-517a-4b3c-a1f0-3cf8bb099eaa":{"id":"/providers/microsoft.powerapps/apis/shared_sharepointonline","displayName":"SharePoint","iconUri":"https://connectoricons-prod.azureedge.net/u/laborbol/releases/ase-v3/1.0.1622.3200/sharepointonline/icon.png","dataSources":["CB-TESTSTUDIO-DEMO","CB-TESTSTUDIO-DEMO"],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read","providers/PowerPlatform.Governance/Operations/Write"],"endpoints":[]},"c06ff568-7b10-4570-af56-5dc517789bc0":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png","dataSources":["cbflow_SendDebugData"],"dependencies":["shared_office365"],"dependents":[],"parameterHints":{"workflowName":{"value":"591644e9-5658-4371-9cbe-2ec145c4b1ae"},"workflowEntityId":{"value":"6dc92f11-78c3-ed11-b597-6045bdac52d3"},"489cdc83-45d1-4ebf-9e19-b0d3d18351eb":{"value":"shared_office365"}},"parameterHintsV2":{"workflowName":{"value":"591644e9-5658-4371-9cbe-2ec145c4b1ae"},"workflowEntityId":{"value":"6dc92f11-78c3-ed11-b597-6045bdac52d3"},"shared_office365":{"value":"489cdc83-45d1-4ebf-9e19-b0d3d18351eb"}},"isOnPremiseConnection":false,"bypassConsent":false,"apiTier":"Standard","actions":["Run"],"endpoints":[]},"489cdc83-45d1-4ebf-9e19-b0d3d18351eb":{"id":"/providers/microsoft.powerapps/apis/shared_office365","displayName":"Office 365 Outlook","iconUri":"https://connectoricons-prod.azureedge.net/u/laborbol/releases/ase-v3/1.0.1622.3200/office365/icon.png","dependents":["c06ff568-7b10-4570-af56-5dc517789bc0"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"apiTier":"Standard","endpoints":[]}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/pub_cbteststudiodemo_f4676_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/pub_cbteststudiodemo_f4676_DocumentUri.msapp</DocumentUri>
+</CanvasApp>
