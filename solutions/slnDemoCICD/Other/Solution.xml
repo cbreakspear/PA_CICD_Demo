@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.22121.146" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.23032.168" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>slnDemoCICD</UniqueName>
     <LocalizedNames>
@@ -80,7 +80,9 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="29" id="{6dc92f11-78c3-ed11-b597-6045bdac52d3}" behavior="0" />
       <RootComponent type="300" schemaName="pub_cbdemoappcicd_4864d" behavior="0" />
+      <RootComponent type="300" schemaName="pub_cbteststudiodemo_f4676" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>
