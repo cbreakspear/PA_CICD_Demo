@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>pub_cbdemoappcicd_4864d</Name>
-  <AppVersion>2023-01-06T20:21:50Z</AppVersion>
+  <AppVersion>2023-03-22T23:23:45Z</AppVersion>
   <Status>Ready</Status>
   <CreatedByClientVersion>3.22122.15.0</CreatedByClientVersion>
   <MinClientVersion>3.22122.15.0</MinClientVersion>
@@ -11,8 +11,8 @@
   <BackgroundColor>rgba(230, 230, 230, 1)</BackgroundColor>
   <DisplayName>CB-DEMO-APP-CICD</DisplayName>
   <Description>Demo for CICD</Description>
-  <CommitMessage xsi:nil="true"></CommitMessage>
-  <Publisher xsi:nil="true"></Publisher>
+  <CommitMessage></CommitMessage>
+  <Publisher></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
   <ConnectionReferences>{}</ConnectionReferences>
   <DatabaseReferences>{}</DatabaseReferences>
