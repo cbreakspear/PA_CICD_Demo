@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>pub_cbteststudiodemo_f4676</Name>
+  <AppVersion>2023-04-20T14:02:25Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.23042.12.0</CreatedByClientVersion>
+  <MinClientVersion>3.23042.12.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","sienaVersion":"20230322T222017Z-3.23032.12.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.23042.12","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","optimizedForTeamsMeeting":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>CB-TESTSTUDIO-DEMO</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"3eaa3607-517a-4b3c-a1f0-3cf8bb099eaa":{"id":"/providers/microsoft.powerapps/apis/shared_sharepointonline","displayName":"SharePoint","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1627/1.0.1627.3238/sharepointonline/icon.png","dataSources":["CB-TESTSTUDIO-DEMO","CB-TESTSTUDIO-DEMO"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read","providers/PowerPlatform.Governance/Operations/Write"]},"2147d0ed-27e6-4f81-b0f5-2244a6ea9f3e":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png","dataSources":["cbflow_SendDebugData"],"dependencies":["80faed3c-69b7-494b-88c8-8a22bce2e729","4151e0be-9a81-492b-b53e-16b1ec6186f1"],"dependents":[],"parameterHints":{"workflowName":{"value":"eae416c9-195d-4580-94fe-a5c8714db134"},"workflowEntityId":{"value":"6dc92f11-78c3-ed11-b597-6045bdac52d3"},"80faed3c-69b7-494b-88c8-8a22bce2e729":{"value":"shared_office365"},"4151e0be-9a81-492b-b53e-16b1ec6186f1":{"value":"shared_sql"}},"parameterHintsV2":{"workflowName":{"value":"eae416c9-195d-4580-94fe-a5c8714db134"},"workflowEntityId":{"value":"6dc92f11-78c3-ed11-b597-6045bdac52d3"},"shared_office365":{"value":"80faed3c-69b7-494b-88c8-8a22bce2e729"},"shared_sql":{"value":"4151e0be-9a81-492b-b53e-16b1ec6186f1"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"]},"80faed3c-69b7-494b-88c8-8a22bce2e729":{"id":"/providers/microsoft.powerapps/apis/shared_office365","displayName":"Office 365 Outlook","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1626/1.0.1626.3238/office365/icon.png","dataSources":[],"dependencies":[],"dependents":["2147d0ed-27e6-4f81-b0f5-2244a6ea9f3e"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"},"4151e0be-9a81-492b-b53e-16b1ec6186f1":{"id":"/providers/microsoft.powerapps/apis/shared_sql","xrmConnectionReferenceLogicalName":"new_sharedsql_40df5","displayName":"SQL Server","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1629/1.0.1629.3253/sql/icon.png","dataSources":[],"dependencies":[],"dependents":["2147d0ed-27e6-4f81-b0f5-2244a6ea9f3e"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"sharedConnectionId":"218b24d0-c91b-42c7-8dc6-db02c1b47cdd","bypassConsent":false,"dataSets":{},"apiTier":"Premium","endpoints":["powerappsdemosqlserver.database.windows.net,powerappssql"],"authenticationType":"sqlAuthentication"}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"dependencyid":"6dc92f11-78c3-ed11-b597-6045bdac52d3","componenttype":29,"componenttypeplatformname":"Workflow"},{"logicalname":"new_sharedsql_40df5","componenttype":10067,"componenttypeplatformname":"ConnectionReference"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/pub_cbteststudiodemo_f4676_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/pub_cbteststudiodemo_f4676_DocumentUri.msapp</DocumentUri>
+</CanvasApp>
