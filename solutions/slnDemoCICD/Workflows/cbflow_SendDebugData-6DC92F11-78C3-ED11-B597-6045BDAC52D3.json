@@ -1,0 +1,480 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_office365": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "pub_sharedoffice365_67099"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_sql": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedsql_40df5"
+        },
+        "api": {
+          "name": "shared_sql"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "61d42836-8482-4105-ae71-95a024124b5f"
+          },
+          "type": "Request",
+          "kind": "PowerApp",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Initializevariable_Value": {
+                  "type": "string",
+                  "description": "Enter initial value",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Initializevariable3_Value": {
+                  "type": "string",
+                  "description": "Enter initial value",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Initializevariable4_Value": {
+                  "type": "string",
+                  "description": "Enter initial value",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Initializevariable5_Value": {
+                  "type": "string",
+                  "description": "Enter initial value",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Initializevariable6_Value": {
+                  "type": "string",
+                  "description": "Enter initial value",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Initializevariable2_Value": {
+                  "type": "string",
+                  "description": "Enter initial value",
+                  "x-ms-powerflows-param-ispartial": false
+                }
+              },
+              "required": [
+                "Initializevariable_Value",
+                "Initializevariable3_Value",
+                "Initializevariable4_Value",
+                "Initializevariable5_Value",
+                "Initializevariable6_Value",
+                "Initializevariable2_Value"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Initialize_variable": {
+          "runAfter": {
+            "Initialize_variable_7": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7087465d-a36e-4aa7-b3a9-81ca9261c1fc"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "TestCaseName",
+                "type": "string",
+                "value": "@{triggerBody()['Initializevariable_Value']}"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_3": {
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b4a812ed-6cee-4c7f-9eac-7241ef9cc9ec"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "TestCaseId",
+                "type": "string",
+                "value": "@{triggerBody()['Initializevariable3_Value']}"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_4": {
+          "runAfter": {
+            "Initialize_variable_3": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2fb08195-1522-4452-9142-4f458a7703fe"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "StartTime",
+                "type": "string",
+                "value": "@{triggerBody()['Initializevariable4_Value']}"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_5": {
+          "runAfter": {
+            "Initialize_variable_4": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7559a710-dde2-4c20-99c4-7cd15c251201"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "EndTime",
+                "type": "string",
+                "value": "@{triggerBody()['Initializevariable5_Value']}"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_6": {
+          "runAfter": {
+            "Initialize_variable_5": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6a892a1a-8561-4659-a42f-1b6668dc1fd0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Success",
+                "type": "string",
+                "value": "@{triggerBody()['Initializevariable6_Value']}"
+              }
+            ]
+          }
+        },
+        "Parse_JSON": {
+          "runAfter": {
+            "Initialize_variable_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6c72ca18-6434-41ab-a1e8-a92f6c041501"
+          },
+          "type": "ParseJson",
+          "inputs": {
+            "content": "@variables('jsoninput')",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Message": {
+                    "type": "string"
+                  },
+                  "Timestamp": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "Message",
+                  "Timestamp"
+                ]
+              }
+            }
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@body('Parse_JSON')",
+          "actions": {
+            "Send_an_email_(V2)": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "a4ebad05-4970-4994-86dd-9ba057d84011"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage/To": "Craig.Breakspear@prolifics.com",
+                  "emailMessage/Subject": "Debug for EMCOR DEMO",
+                  "emailMessage/Body": "<p>Here is the Debug Output from the Test Case: @{variables('TestCaseName')}<br>\n<br>\n----------------<br>\n---@{variables('Success')}---@{variables('EndTime')}---@{variables('StartTime')}---@{variables('TestCaseId')}---@{items('Apply_to_each')['Message']}</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Condition_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9214ae4b-ba50-4798-82ad-038244cde90f"
+          },
+          "type": "Foreach"
+        },
+        "Initialize_variable_2": {
+          "runAfter": {
+            "Initialize_variable_6": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d4ed9b73-465f-46b3-b25b-062dfd81f3c7"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "jsoninput",
+                "type": "string",
+                "value": "@triggerBody()['Initializevariable2_Value']"
+              }
+            ]
+          }
+        },
+        "Respond_to_a_PowerApp_or_flow": {
+          "runAfter": {
+            "Condition_3": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c08c014d-aacc-4a15-b0d5-c8a0800e1f19"
+          },
+          "type": "Response",
+          "kind": "PowerApp",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "resp": "{}"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "resp": {
+                  "title": "resp",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Apply_to_each_2": {
+          "foreach": "@body('Parse_JSON')",
+          "actions": {
+            "Condition": {
+              "actions": {
+                "Set_variable": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "a64e4eeb-c8cb-4be6-ac8a-d67b4764e8ba"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "TestErrorOccured",
+                    "value": true
+                  }
+                }
+              },
+              "runAfter": {},
+              "expression": {
+                "contains": [
+                  "@items('Apply_to_each_2')['Message']",
+                  "Failed"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7caf76b5-e523-4646-aba3-1cf4bf963a6a"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "Parse_JSON": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e3fd68cf-697a-4939-82b4-436798e7b6e2"
+          },
+          "type": "Foreach"
+        },
+        "Initialize_variable_7": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "55be75a2-575f-4ea4-bcf1-67e55b44a344"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "TestErrorOccured",
+                "type": "boolean",
+                "value": false
+              }
+            ]
+          }
+        },
+        "Condition_2": {
+          "actions": {
+            "Update_row_(V2)": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "e41c042a-7084-4a95-b5b2-14348056050e"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sql",
+                  "operationId": "PatchItem_V2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sql"
+                },
+                "parameters": {
+                  "server": "default",
+                  "database": "default",
+                  "table": "[dbo].[powerapps_cicd]",
+                  "id": "1",
+                  "item/teststatus": "FAILED",
+                  "item/testresult": "@variables('TestCaseName')",
+                  "item/testmessage": "@variables('jsoninput')"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            },
+            "Terminate": {
+              "runAfter": {
+                "Update_row_(V2)": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "092759b7-dcc3-4368-8507-eaaa6ffc7825"
+              },
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Failed",
+                "runError": {
+                  "code": "88",
+                  "message": "There was an issue with one or more tests"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Apply_to_each_2": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "equals": [
+              "@variables('TestErrorOccured')",
+              true
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4ba09cef-49d7-4391-85ef-fbadb4a0f49d"
+          },
+          "type": "If"
+        },
+        "Condition_3": {
+          "actions": {
+            "Update_row_(V2)_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "4c2581be-1bda-4490-86c2-e39a4833b52e"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sql",
+                  "operationId": "PatchItem_V2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sql"
+                },
+                "parameters": {
+                  "server": "default",
+                  "database": "default",
+                  "table": "[dbo].[powerapps_cicd]",
+                  "id": "1",
+                  "item/teststatus": "SUCCESS",
+                  "item/testresult": "@variables('TestCaseName')",
+                  "item/testmessage": "@variables('jsoninput')"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "equals": [
+              "@variables('TestErrorOccured')",
+              false
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "45c13f35-1fba-479d-b862-b29fb72e66d4"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
