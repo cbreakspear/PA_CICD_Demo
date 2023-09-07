@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>pub_cbdemoappcicd_4864d</Name>
-  <AppVersion>2023-08-26T16:51:51Z</AppVersion>
+  <AppVersion>2023-09-07T20:46:19Z</AppVersion>
   <Status>Ready</Status>
-  <CreatedByClientVersion>3.23082.20.0</CreatedByClientVersion>
-  <MinClientVersion>3.23082.20.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.23082.20","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20230826T162835Z-3.22122.15.0","showStatusBar":"false"}</Tags>
+  <CreatedByClientVersion>3.23084.13.0</CreatedByClientVersion>
+  <MinClientVersion>3.23084.13.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.23084.13","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20230907T203310Z-3.23082.20.0","showStatusBar":"false"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>rgba(230, 230, 230, 1)</BackgroundColor>
   <DisplayName>CB-DEMO-APP-CICD</DisplayName>
   <Description>Demo for CICD</Description>
-  <CommitMessage></CommitMessage>
+  <CommitMessage xsi:nil="true"></CommitMessage>
   <Publisher></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
   <ConnectionReferences>{}</ConnectionReferences>
